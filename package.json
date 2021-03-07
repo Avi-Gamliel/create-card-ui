@@ -1,0 +1,23 @@
+{
+  "name": "simple-card-game-ui",
+  "version": "1.0.0",
+  "description": "Create simple card game ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avi-Gamliel/create-card-ui.git"
+  },
+  "keywords": [
+    "card-ui",
+    "card-game"
+  ],
+  "author": "Avi Gamliel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Avi-Gamliel/create-card-ui/issues"
+  },
+  "homepage": "https://github.com/Avi-Gamliel/create-card-ui#readme"
+}

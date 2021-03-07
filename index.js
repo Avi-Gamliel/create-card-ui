@@ -1,3 +1,4 @@
+
 function makeCardUi(option) {
 
     let cardDiv;
@@ -14,12 +15,6 @@ function makeCardUi(option) {
         }
 
         if (cardDiv) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = './style.css';
-            document.getElementsByTagName('HEAD')[0].appendChild(link);
-
             const suits = {
                 'H': '♥',
                 'C': '♠',
