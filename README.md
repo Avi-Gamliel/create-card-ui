@@ -6,16 +6,14 @@ Tool to crate simple card game ui
 
 `npm i simple-card-game-ui --save`
 
-and
+And...
 
-`import 'simple-card-game-ui/dist/style.css';`
+```
 
+import {makeCardUi} from 'simple-game-card-ui'
+import 'simple-game-card-ui/style.css';
 
-then...
-
-
-
-` import {makeCardUi} from 'simple-card-game-ui' `
+```
 
 
 # Create card
