@@ -1,0 +1,55 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.card-ui{
+    --s-a: 1.875rem;
+    --s-c: 6.25rem;
+    --t-p: .2rem;
+    --l-r: .4rem;
+    --h: 210px;
+    --w: 150px;
+    --b-r:5px;
+    --b:2px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: var(--s-c);
+    line-height: var(--s-c);
+    height:  var(--h);
+    width: var(--w);
+    border: var(--b);
+    border-radius: var(--b-r);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+.card-ui::before,
+.card-ui::after{
+    position: absolute;
+    content:attr(data-value);
+    font-size: var(--s-a);
+    height: 100%;
+    line-height: var(--s-a) ;
+
+}
+
+.card-ui::before{
+    top: var(--t-p);
+    left: var(--l-r);
+}
+
+.card-ui::after{
+    bottom: var(--t-p);
+    right: var(--l-r);
+    transform: rotate(180deg);
+}
+.red-card{
+    color: red;
+}
+.black-card{
+    color:black
+}
