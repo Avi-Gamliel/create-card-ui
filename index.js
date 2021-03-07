@@ -91,8 +91,13 @@ function makeCardUi(option) {
                 cardDiv.innerText = value;
 
             } else {
-                cardDiv.innerText = simbol;
-
+                if (option.type === 'value') {
+                    cardDiv.innerText = value;
+                } else if (option.type === 'suit') {
+                    cardDiv.innerText = simbol
+                } else {
+                    cardDiv.innerText = value;
+                }
             }
 
             let splitHeight = cardHeight.split("px")[0]
@@ -116,5 +121,5 @@ function makeCardUi(option) {
     }
 
 }
-
+makeCardUi({ value: 2, suit: 'C', class: "card" })
 module.exports.makeCardUi = makeCardUi;

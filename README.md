@@ -44,6 +44,7 @@ makeCardUi({
     suit: 'Suit',
     id: 'id-name',
     class: 'class-name'
+    type: 'value'
     height: Number,
     width: Number,
     borderColor: 'color',
@@ -57,6 +58,7 @@ makeCardUi({
 * *suit* - Suits of card you can pass H,S,C,D / h,s,c,d.  
 * *id* - Insert the id of the element. *notice that you not insert class with id*
 * *class* -  Insert the class of the element. *notice that you not insert id with class*
+* *type* -  You can change the type of the card. *value - show number inside  | suit - show suit inside* 
 * *height* - The height of the card. *insert only number*
 * *width* - The width of the card. *insert only number*
 * *borderColor* - Border color.
