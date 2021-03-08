@@ -4,7 +4,7 @@ Tool to create simple card game ui
 
 # Installation
 
-`npm i simple-card-game-ui --save`
+`npm i simple-game-card-ui --save`
 
 And...
 
