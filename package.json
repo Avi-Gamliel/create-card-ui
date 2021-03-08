@@ -1,6 +1,6 @@
 {
   "name": "simple-game-card-ui",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "Create simple card game ui",
   "main": "index.js",
   "scripts": {

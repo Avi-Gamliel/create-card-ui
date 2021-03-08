@@ -1,6 +1,6 @@
 # What is this? 
 
-Tool to crate simple card game ui
+Tool to create simple card game ui
 
 # Installation
 
