@@ -2,6 +2,27 @@
     box-sizing: border-box;
 }
 
+.card-back{
+    --s-a: 1.875rem;
+    --s-c: 6.25rem;
+    --t-p: .2rem;
+    --l-r: .4rem;
+    --h: 210px;
+    --w: 150px;
+    --b-r:5px;
+    --b:2px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: var(--s-c);
+    line-height: var(--s-c);
+    height:  var(--h);
+    width: var(--w);
+    border: var(--b);
+    border-radius: var(--b-r);
+}
 .card-ui{
     --s-a: 1.875rem;
     --s-c: 6.25rem;
@@ -53,4 +74,51 @@
 }
 .black-card{
     color:black
+}
+
+
+.card-flip{
+    display: flex;
+width:150px;
+height: 210px;
+perspective:1000px;
+/* background: none; */
+}
+
+.card-flip-inner{
+    width:100%;
+    height:100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    /* background-color: rgba(245, 222, 179, 0); */
+}
+
+.card-flip-inner.is-flipped{
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    /* border-radius: 16; */
+    /* background-color: rgba(245, 222, 179, 0.768); */
+
+    /* box-shadow: 0px 3px 18px 3px rgba(0,0,0,0.2);   */
+
+}
+
+
+
+.card-face-front{
+    
+}
+
+.card-face-back{
+transform: rotateY(180deg) ;
 }
