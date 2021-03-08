@@ -1,6 +1,6 @@
 
 function makeCardUi(option) {
-    console.log(3, option);
+
     let cardDiv;
     if (!option.class && !option.id) {
         console.error('You need to insert id element or class')
@@ -74,7 +74,6 @@ function makeCardUi(option) {
             } else {
                 cardRadius = Number(option.radius) + 'px';
             }
-            console.log(77, option.borderFlip, option.borderSize);
             if (option.borderSize > 0) {
                 if (option.borderSize == '' || option.borderSize == null || option.borderSize == undefined) {
                     cardBorderWidth = '2px';
@@ -92,9 +91,6 @@ function makeCardUi(option) {
                     cardBorderWidth = Number(option.borderFlip) + 'px';
                 }
             }
-
-
-            console.log(96, cardBorderWidth);
 
             if (option.borderColor == '' || option.borderColor == null || option.borderColor == undefined) {
                 cardBorderColor = 'black';
@@ -127,7 +123,7 @@ function makeCardUi(option) {
             let sizeAfterRoot = Number(splitHeight) / 7;
             let leftRightRoot = Number(splitHeight) / 32.81;
             let topLeftRoot = Number(splitHeight) / 32.81;
-            console.log(cardDiv);
+
 
             cardDiv.style.setProperty("--s-a", `${sizeAfterRoot}px`);
             cardDiv.style.setProperty("--s-c", `${sizeRoot}px`);
@@ -146,14 +142,13 @@ function makeCardUi(option) {
 }
 
 function makeBackCardUi(option) {
-    console.log(137, option);
+
     let cardDiv;
     if (!option.class && !option.id) {
         console.error('You need to insert id element or class')
 
     } else if (!option.src && !option.color) {
-        console.log(option.src, option.color);
-        console.log(1);
+
         console.error('You need to insert img or background color')
     } else {
 
@@ -203,8 +198,7 @@ function makeBackCardUi(option) {
                     cardBorderWidth = Number(option.borderFlipFront) + 'px';
                 }
             }
-            console.log(205, option.borderFlipFront, option.borderSize);
-            console.log(cardBorderWidth);
+
             if (option.borderColor == '' || option.borderColor == null || option.borderColor == undefined) {
                 cardBorderColor = 'black';
             } else {
@@ -216,13 +210,13 @@ function makeBackCardUi(option) {
             } else {
                 border = `${cardBorderWidth} solid ${cardBorderColor}`
             }
-            console.log(border);
+
             let splitHeight = cardHeight.split("px")[0]
             let sizeRoot = Number(splitHeight) / 2.3;
             let sizeAfterRoot = Number(splitHeight) / 7;
             let leftRightRoot = Number(splitHeight) / 32.81;
             let topLeftRoot = Number(splitHeight) / 32.81;
-            console.log(cardDiv);
+
             cardDiv.style.setProperty("--s-a", `${sizeAfterRoot}px`);
             cardDiv.style.setProperty("--s-c", `${sizeRoot}px`);
             cardDiv.style.setProperty("--l-r", `${leftRightRoot}px`);
@@ -259,7 +253,7 @@ function createCardFlip(option) {
         console.error('You need to insert id element or class')
 
     } else {
-        console.log(239, option);
+
         let temp = `<div class="card-flip-inner">
                         <div class="card-face card-face-front">
                             <div class="card-sample">
@@ -286,7 +280,7 @@ function createCardFlip(option) {
         CARD.appendChild(newCard);
         newCard.innerHTML = temp;
         if (option.id) {
-            console.log(266, option.borderSize);
+
 
             makeBackCardUi({
                 src: option.src,
@@ -300,7 +294,7 @@ function createCardFlip(option) {
                 color: option.color
             })
         } else if (option.class) {
-            // console.log(266, option.borderSize);
+
             makeBackCardUi({
                 src: option.src,
                 class: `${option.class} .card-flip .card-flip-inner .card-face .card-sample .front`,
@@ -315,9 +309,9 @@ function createCardFlip(option) {
         }
 
         if (option.suit || option.value) {
-            console.log(option, 272);
+
             if (option.class) {
-                console.log(option, 272);
+
 
                 makeCardUi({
                     value: option.value,
@@ -330,7 +324,6 @@ function createCardFlip(option) {
                     radius: option.radius
                 })
             } else if (option.id) {
-                console.log(option, 272);
 
                 makeCardUi({
                     value: option.value,
@@ -351,12 +344,11 @@ function createCardFlip(option) {
         } else if (option.id) {
             cardUi = document.querySelector(`#${option.id} .card-flip .card-flip-inner .card-face .card-sample .front`);
         }
-        console.log(newCard);
+
         newCard.style.width = getComputedStyle(cardUi).getPropertyValue("--w")
         newCard.style.height = getComputedStyle(cardUi).getPropertyValue("--h")
         newCard.style.borderRadius = getComputedStyle(cardUi).getPropertyValue("--b-r")
-        // newCard.style.border = getComputedStyle(cardUi).getPropertyValue("--b")
-        // console.log(getComputedStyle(cardUi).getPropertyValue("--b"));
+
     }
 
 
